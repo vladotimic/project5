@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(75, 54, 124);
+  font-family: 'Rubik', sans-serif;
+}
+
+#box {
+  margin: 20px auto;
+  border-radius: 20px;
+  background-color: white;
+}
+
+header {
+  padding: 50px 0;
+}
+
+h1 {
+  color: rgb(75, 54, 124);
+  padding-bottom: 20px;
+  font-size: 62px;
+}
+
+section h4 {
+  color: rgb(75, 54, 124);
+  font-weight: bold;
+  font-size: 26px;
+}
+
+section #game h5 {
+  color: rgba(75, 54, 124, 0.8);
+}
+
+section #logo {
+  margin: 30px 0px;
+}
+
+section #name {
+  margin: 30px 0px;
+}
+
+section #name h4, section #game h4, section #status h4 {
+  padding-bottom: 10px;
+}
+
+section #game {
+  margin: 30px 0px;
+}
+
+section #status {
+  margin: 25px 0px;
+}
+
+a {
+  color: rgb(75, 54, 124);
+}
+
+a:hover {
+  color: rgba(75, 54, 124, 0.5);
+}
+
+span.offline {
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+span.online {
+  border: 1px solid green;
+  background-color: green;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+img {
+  height: 53px !important;
+}
