@@ -14,6 +14,7 @@ body {
   margin: 20px auto;
   border-radius: 20px;
   background-color: white;
+  box-shadow: 15px 25px 30px rgb(59, 42, 99);
 }
 
 header {
@@ -33,8 +34,9 @@ nav {
 div.selector {
   margin: auto !important;
   float: left !important;
-  border: 1px solid rgb(75, 54, 124);
+  border: 2px solid rgb(75, 54, 124);
   border-radius: 20px;
+  box-shadow: 2px 5px 10px rgba(75, 54, 124, 0.4);
 }
 
 div.active {
@@ -46,12 +48,14 @@ div.selector:hover {
   background-color: rgb(75, 54, 124);
   color: white;
   cursor: pointer;
+  box-shadow: 6px 6px 20px rgba(75, 54, 124, 0.7);
 }
 
 div.active:hover {
   background-color: white;
   color: rgb(75, 54, 124);
   cursor: pointer;
+  box-shadow: 6px 6px 20px rgba(75, 54, 124, 0.7);
 }
 
 nav p {
