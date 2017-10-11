@@ -26,13 +26,46 @@ h1 {
   font-size: 62px;
 }
 
+nav {
+  margin: 35px auto;
+}
+
+div.selector {
+  margin: auto !important;
+  float: left !important;
+  border: 1px solid rgb(75, 54, 124);
+  border-radius: 20px;
+}
+
+div.active {
+  background-color: rgb(75, 54, 124);
+  color: white;
+}
+
+div.selector:hover {
+  background-color: rgb(75, 54, 124);
+  color: white;
+  cursor: pointer;
+}
+
+div.active:hover {
+  background-color: white;
+  color: rgb(75, 54, 124);
+  cursor: pointer;
+}
+
+nav p {
+  margin: 5px 70px;
+  font-size: 22px;
+}
+
 section h4 {
   color: rgb(75, 54, 124);
   font-weight: bold;
   font-size: 26px;
 }
 
-section #game h5 {
+section #game-on h5, section #game-off h5 {
   color: rgba(75, 54, 124, 0.8);
 }
 

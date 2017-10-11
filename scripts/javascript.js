@@ -15,15 +15,15 @@ $(document).ready(function() {
           $.getJSON("https://api.twitch.tv/kraken/streams/" + data1.name + "?client_id=vbql4wlp1kpixjek8v3zc7hr8rlx1i").done(function(data2) {
             var name = data2._links.self.slice(37);
             if (data2.stream === null) {
-              $("#logo").append("<img class=\"img-fluid img-thumbnail\" src=\"" + data1.logo + "\"></br>");
-              $("#name").append("<a href=\"https://www.twitch.tv/" + name + "\" target=\"_blank\"><h5><i class=\"fa fa-twitch\" aria-hidden=\"true\"></i> " + name + "</h5></a><br>");
-              $("#game").append("<h5>" + data1.game + "</h5><br>");
-              $("#status").append("<span class=\"offline\"><i class=\"fa fa-times-circle-o\" aria-hidden=\"true\"></i> offline!</span><br><br>");
+              $("#logo-off").append("<img class=\"img-fluid img-thumbnail\" src=\"" + data1.logo + "\"></br>");
+              $("#name-off").append("<a href=\"https://www.twitch.tv/" + name + "\" target=\"_blank\"><h5><i class=\"fa fa-twitch\" aria-hidden=\"true\"></i> " + name + "</h5></a><br>");
+              $("#game-off").append("<h5>" + data1.game + "</h5><br>");
+              $("#status-off").append("<span class=\"offline\"><i class=\"fa fa-times-circle-o\" aria-hidden=\"true\"></i> offline!</span><br><br>");
             } else {
-              $("#logo").append("<img class=\"img-fluid img-thumbnail\" src=\"" + data1.logo + "\"></br>");
-              $("#name").append("<a href=\"https://www.twitch.tv/" + name + "\" target=\"_blank\"><h5><i class=\"fa fa-twitch\" aria-hidden=\"true\"></i> " + name + "</h5></a><br>");
-              $("#game").append("<h5>" + data1.game + "</h5><br>");
-              $("#status").append("<span class=\"online\"><i class=\"fa fa-times-circle-o\" aria-hidden=\"true\"></i> online!</span><br><br>");
+              $("#logo-on").append("<img class=\"img-fluid img-thumbnail\" src=\"" + data1.logo + "\"></br>");
+              $("#name-on").append("<a href=\"https://www.twitch.tv/" + name + "\" target=\"_blank\"><h5><i class=\"fa fa-twitch\" aria-hidden=\"true\"></i> " + name + "</h5></a><br>");
+              $("#game-on").append("<h5>" + data1.game + "</h5><br>");
+              $("#status-on").append("<span class=\"online\"><i class=\"fa fa-times-circle-o\" aria-hidden=\"true\"></i> online!</span><br><br>");
             }
           });
         },
@@ -36,4 +36,42 @@ $(document).ready(function() {
     }
   }
   getDataByTwitch();
+  $("#all").click(function(){
+    $(".selector").removeClass("active");
+    $(this).addClass("active");
+    $("#logo-on").show();
+    $("#name-on").show();
+    $("#game-on").show();
+    $("#status-on").show();
+    $("#logo-off").show();
+    $("#name-off").show();
+    $("#game-off").show();
+    $("#status-off").show();
+  });
+
+  $("#online").click(function(){
+    $(".selector").removeClass("active");
+    $(this).addClass("active");
+    $("#logo-on").show();
+    $("#name-on").show();
+    $("#game-on").show();
+    $("#status-on").show();
+    $("#logo-off").hide();
+    $("#name-off").hide();
+    $("#game-off").hide();
+    $("#status-off").hide();
+  });
+
+    $("#offline").click(function(){
+      $(".selector").removeClass("active");
+      $(this).addClass("active");
+      $("#logo-off").show();
+      $("#name-off").show();
+      $("#game-off").show();
+      $("#status-off").show();
+      $("#logo-on").hide();
+      $("#name-on").hide();
+      $("#game-on").hide();
+      $("#status-on").hide();
+    });
 });
