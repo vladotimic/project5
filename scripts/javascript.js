@@ -23,7 +23,7 @@ $(document).ready(function() {
               $("#logo-on").append("<img class=\"img-fluid img-thumbnail\" src=\"" + data1.logo + "\"></br>");
               $("#name-on").append("<a href=\"https://www.twitch.tv/" + name + "\" target=\"_blank\"><h5><i class=\"fa fa-twitch\" aria-hidden=\"true\"></i> " + name + "</h5></a><br>");
               $("#game-on").append("<h5>" + data1.game + "</h5><br>");
-              $("#status-on").append("<span class=\"online\"><i class=\"fa fa-times-circle-o\" aria-hidden=\"true\"></i> online!</span><br><br>");
+              $("#status-on").append("<span class=\"online\"><i class=\"fa fa-check-circle-o\" aria-hidden=\"true\"></i> online!</span><br><br>");
             }
           });
         },
